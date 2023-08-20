@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '_', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
         <title>BoardGame</title>
@@ -11,7 +11,9 @@
         <div class="games">
             @foreach ($games as $game)
             <div class="game">
-                <h2 class="title">{{ $game->title }}</h2>
+                <h2 class='title'>
+                    <a href="/games/{{ $game->id }}">{{ $game->title }}</a>
+                </h2>
                 <p class="body">{{ $game->body }}</p>
             </div>
             @endforeach
