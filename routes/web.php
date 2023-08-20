@@ -15,3 +15,4 @@ use App\Http\Controllers\GameController;
 */
 
 Route::get('/', [GameController::class, 'index']);
+Route::get('/games/{game}', [GameController::class, 'show']);
