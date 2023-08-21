@@ -21,5 +21,6 @@
         <dev class='paginate'>
             {{ $games->links() }}
         </dev>
+        <a href='/games/create'>create</a>
     </body>
 </html>
