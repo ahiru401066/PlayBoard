@@ -15,6 +15,11 @@
                     <a href="/games/{{ $game->id }}">{{ $game->title }}</a>
                 </h2>
                 <p class="body">{{ $game->body }}</p>
+                <form action="/games/{{ $game->id }}" id="form_{{ $game->id }}" method="post">
+                    @csrf
+                    @method('DELETE')
+                    <button type="button" onclick="deletePost({{ $game->id }})">delete</button>
+                </form>
             </div>
             @endforeach
         </div>
@@ -22,5 +27,15 @@
             {{ $games->links() }}
         </dev>
         <a href='/games/create'>create</a>
+        
+        <script>
+            function deletePost(id) {
+                'use strict'
+                
+                if (confirm('削除すると復元できません。\n本当に削除しますか?')) {
+                    document.getElementById(`form_${id}`).submit();
+                }
+            }
+        </script>
     </body>
 </html>

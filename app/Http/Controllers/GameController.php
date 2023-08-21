@@ -42,4 +42,10 @@ class GameController extends Controller
         
         return redirect('/games/' . $game->id);
     }
+    
+    public function delete(Game $game)
+    {
+        $game->delete();
+        return redirect('/');
+    }
 }
