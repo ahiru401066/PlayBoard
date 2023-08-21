@@ -16,6 +16,7 @@
                 <h3>本文</h3>
                 <p>{{ $game->body }}</p>
             </div>   
+            <div class="edit"><a href="/games/{{ $game->id }}/edit">edit</a></div>
         </div>
         <div class="footer">
             <a href="/">戻る</a>
