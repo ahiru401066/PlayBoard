@@ -19,4 +19,18 @@ class Game extends Model
         return $this->orderBy('updated_at', 'DESC')->paginate($limit_count);
     }
     
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+    
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
+    
+    public function rates()
+    {
+        return $this->hasMany(Rate::class);
+    }
 }
