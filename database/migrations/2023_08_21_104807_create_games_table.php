@@ -15,10 +15,18 @@ return new class extends Migration
     {
         Schema::create('games', function (Blueprint $table) {
             $table->id();
-            $table->string('title', 50);
+            // $table->category_id();
+            
+            $table->string('name',20);
             $table->string('body', 200);
+            $table->string('number',5);
+            $table->string('game_time',5);
+            $table->string('image',50);
+            $table->string('release',30);
+            $table->string('revel',5);
+            $table->string('rule_type',30);
+            $table->foreignId('category_id')->constrained();
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 

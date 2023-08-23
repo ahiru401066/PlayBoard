@@ -22,6 +22,16 @@
                 </div>   
                 <div class="edit"><a href="/games/{{ $game->id }}/edit">edit</a></div>
             </div>
+            <div>
+                <form action="/comments/post" method="POST">
+                    
+                </form>
+            </div>
+            <div>
+                @foreach($comments as $comment)
+                    <p></p>
+                @endforeach
+            </div>
             <div class="footer">
                 <a href="/">戻る</a>
             </div>
