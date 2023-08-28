@@ -13,7 +13,7 @@
         </x-slot>
         <body>
             <h1 class="title">
-                {{ $game->title }}
+                {{ $game->name }}
             </h1>
             <div class="content">
                 <div class="content__game">
