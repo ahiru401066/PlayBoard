@@ -24,7 +24,7 @@ class GameSeeder extends Seeder
                 'image' => 'image_url',
                 'release' => '2000/00/00',
                 'revel' => 'Easy',
-                'category_id' => '1',
+                'category_id' => 1,
                 'created_at' => new DateTime(),
                 'updated_at' => new DateTime(),
         ]);
@@ -37,7 +37,7 @@ class GameSeeder extends Seeder
                 'image' => 'image_url',
                 'release' => '2000/00/00',
                 'revel' => 'Normal',
-                'category_id' => '2',
+                'category_id' => 2,
                 'created_at' => new DateTime(),
                 'updated_at' => new DateTime(),
         ]);
@@ -49,7 +49,7 @@ class GameSeeder extends Seeder
                 'image' => 'image_url',
                 'release' => '2000/00/00',
                 'revel' => 'Normal',
-                'category_id' => '3',
+                'category_id' => 3,
                 'created_at' => new DateTime(),
                 'updated_at' => new DateTime(),
         ]);
@@ -61,7 +61,7 @@ class GameSeeder extends Seeder
                 'image' => 'image_url',
                 'release' => '2000/00/00',
                 'revel' => 'Hard',
-                'category_id' => '1',
+                'category_id' => 4,
                 'created_at' => new DateTime(),
                 'updated_at' => new DateTime(),
         ]);
@@ -73,7 +73,7 @@ class GameSeeder extends Seeder
                 'image' => 'image_url',
                 'release' => '2000/00/00',
                 'revel' => 'easy',
-                'category_id' => '3',
+                'category_id' => 4,
                 'created_at' => new DateTime(),
                 'updated_at' => new DateTime(),
         ]);

@@ -16,7 +16,7 @@
                 @foreach ($games as $game)
                 <div class="game">
                     <h2 class='title'>
-                        <a href="/games/{{ $game->id }}">{{ $game->title }}</a>
+                        <a href="/games/{{ $game->id }}">{{ $game->name }}</a>
                     </h2>
                     <p class="body">{{ $game->body }}</p>
                     <form action="/games/{{ $game->id }}" id="form_{{ $game->id }}" method="post">
