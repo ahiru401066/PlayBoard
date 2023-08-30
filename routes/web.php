@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\GameController;
+use App\Http\Controllers\CommentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,6 +33,8 @@ Route::controller(GameController::class)->middleware(['auth'])->group(function()
     Route::delete('/games/{game}', 'delete')->name('delete');
     Route::get('/games/{game}/edit', 'edit')->name('edit');
 });
+
+ Route::post('/games/{game}/comment', [CommentController::class,'store'])->middleware(['auth'])->name('comment.store');
 
 Route::middleware('auth')->group(function () {
     Route::get('/', [GameController::class, 'index'])->name('index')->middleware('auth');
