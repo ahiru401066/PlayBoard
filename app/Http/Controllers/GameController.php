@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Comment;
 use App\Models\Game;
 use App\Http\Requests\GameRequest;
 
@@ -13,9 +14,9 @@ class GameController extends Controller
         return view('games/index')->with(['games' => $game->getPaginateByLimit()]);
     }
     
-    public function show(Game $game)
-    {
-        return view('games/show')->with(['game' => $game]);
+    public function show(Game $game, Comment $comment)
+    {   
+        return view('games/show')->with(['game' => $game, 'comments' => $comment->getByUser()]);
     }
     
     public function create()
@@ -48,4 +49,5 @@ class GameController extends Controller
         $game->delete();
         return redirect('/');
     }
+    
 }

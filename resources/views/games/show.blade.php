@@ -21,15 +21,20 @@
                     <p>{{ $game->body }}</p>
                 </div>   
                 <div class="edit"><a href="/games/{{ $game->id }}/edit">edit</a></div>
+                <div class="show_create"><a href="/games/show_create/show_com&rate">create Comments</a></div>
             </div>
-            <div>
-                <form action="/comments/post" method="POST">
-                    
-                </form>
-            </div>
+            <form action="/games/{{ $game->id }}/comment" method="POST">
+                @csrf
+                <div class="comment_body">
+                    <h2>create Comment</h2>
+                    <textarea name="comment[comment]" placeholder="コメントサンプル"></textarea>
+                </div>
+                <input type="submit" value="store">
+            </form>
             <div>
                 @foreach($comments as $comment)
-                    <p></p>
+                    <p>{{ $comment->user->name }}</p>
+                    <p>{{ $comment->comment }}</p>
                 @endforeach
             </div>
             <div class="footer">
