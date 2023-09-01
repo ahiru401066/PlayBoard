@@ -19,6 +19,7 @@
                         <a href="/games/{{ $game->id }}">{{ $game->name }}</a>
                     </h2>
                     <p class="body">{{ $game->body }}</p>
+                    <a href="/categories/{{ $game->category->id }}">{{ $game->category->category }}</a>
                     <form action="/games/{{ $game->id }}" id="form_{{ $game->id }}" method="post">
                         @csrf
                         @method('DELETE')
