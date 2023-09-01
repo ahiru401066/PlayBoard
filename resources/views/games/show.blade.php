@@ -20,8 +20,6 @@
                     <h3>本文</h3>
                     <p>{{ $game->body }}</p>
                 </div>   
-                <div class="edit"><a href="/games/{{ $game->id }}/edit">edit</a></div>
-                <div class="show_create"><a href="/games/show_create/show_com&rate">create Comments</a></div>
             </div>
             <form action="/games/{{ $game->id }}/comment" method="POST">
                 @csrf
@@ -38,6 +36,8 @@
                 @endforeach
             </div>
             <div class="footer">
+                <div>#########################################</div>
+                <div class="edit"><a href="/games/{{ $game->id }}/edit">edit</a></div>
                 <a href="/">戻る</a>
             </div>
         </body>
