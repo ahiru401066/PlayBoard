@@ -21,6 +21,7 @@
                     <p>{{ $game->body }}</p>
                 </div>   
             </div>
+            <!--コメント入力-->
             <form action="/games/{{ $game->id }}/comment" method="POST">
                 @csrf
                 <div class="comment_body">
@@ -29,10 +30,24 @@
                 </div>
                 <input type="submit" value="store">
             </form>
+            <!--評価入力-->
+            <form action="/games/{{ $game->id }}/rate" method="POST">
+                @csrf
+                <div class="rate_body">
+                    <h2>create Rate</h2>
+                    <textarea name="rate[rate]" placeholder="評価"></textarea>
+                </div>
+                <input type="submit" value="store">
+            </form>
             <div>
                 @foreach($comments as $comment)
                     <p>{{ $comment->user->name }}</p>
                     <p>{{ $comment->comment }}</p>
+                @endforeach
+            </div>
+            <div>
+                @foreach($rates as $rate)
+                    <p>{{ $rate->rate }}</p>
                 @endforeach
             </div>
             <div class="footer">

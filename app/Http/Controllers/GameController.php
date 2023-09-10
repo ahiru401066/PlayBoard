@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Comment;
 use App\Models\Game;
+use App\Models\Rate;
 use App\Http\Requests\GameRequest;
 
 class GameController extends Controller
@@ -14,9 +15,9 @@ class GameController extends Controller
         return view('games/index')->with(['games' => $game->getPaginateByLimit()]);
     }
     
-    public function show(Game $game, Comment $comment)
+    public function show(Game $game, Comment $comment, Rate $rate)
     {   
-        return view('games/show')->with(['game' => $game, 'comments' => $comment->getByUser()]);
+        return view('games/show')->with(['game' => $game, 'rates' => $rate->get(), 'comments' => $comment->getByUser()]);
     }
     
     public function create()

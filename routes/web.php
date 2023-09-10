@@ -4,6 +4,8 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\MatchingController;
+use App\Http\Controllers\RateController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,8 +38,9 @@ Route::controller(GameController::class)->middleware(['auth'])->group(function()
 });
 
 Route::get('/categories/{category}', [CategoryController::class, 'index'])->middleware("auth");
-
 Route::post('/games/{game}/comment', [CommentController::class,'store'])->middleware(['auth'])->name('comment.store');
+Route::post('/games/{game}/rate', [RateController::class,'store'])->middleware(['auth'])->name('rate.store');
+Route::get('/matchings/index', [MatchingController::class, 'index'])->name('matching');
 
 Route::middleware('auth')->group(function () {
     Route::get('/', [GameController::class, 'index'])->name('index')->middleware('auth');
