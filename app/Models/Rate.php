@@ -9,6 +9,12 @@ class Rate extends Model
 {
     use HasFactory;
     
+    protected $fillable = [
+        'rate',
+        'user_id',
+        'game_id',
+    ];
+    
     public function game()
     {
         return $this->belongsTo(Game::class);
@@ -17,5 +23,10 @@ class Rate extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+    
+    public function GetByAverageRate()
+    {   
+        //
     }
 }
