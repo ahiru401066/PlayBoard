@@ -40,13 +40,13 @@
                 <input type="submit" value="store">
             </form>
             <div>
-                @foreach($comments as $comment)
+                @foreach($game->comments as $comment)
                     <p>{{ $comment->user->name }}</p>
-                    <p>{{ $comment->comment }}</p>
+                    <p>{{ $comment->comment}}</p>
                 @endforeach
             </div>
             <div>
-                @foreach($rates as $rate)
+                @foreach($game->rates as $rate)
                     <p>{{ $rate->rate }}</p>
                 @endforeach
             </div>

@@ -40,7 +40,12 @@ Route::controller(GameController::class)->middleware(['auth'])->group(function()
 Route::get('/categories/{category}', [CategoryController::class, 'index'])->middleware("auth");
 Route::post('/games/{game}/comment', [CommentController::class,'store'])->middleware(['auth'])->name('comment.store');
 Route::post('/games/{game}/rate', [RateController::class,'store'])->middleware(['auth'])->name('rate.store');
-Route::get('/matchings/index', [MatchingController::class, 'index'])->name('matching');
+// Matching
+Route::get('/matchings/index', [MatchingController::class, 'index'])->middleware(['auth'])->name('matching');
+Route::post('/matchings/create', [MatchingController::class, 'store'])->middleware(['auth'])->name('matching.store');
+Route::get('/matchings/{matching}', [MatchingController::class, 'show'])->middleware(['auth'])->name('matching.show');
+Route::post('/matchings/{matching}/join', [MatchingController::class, 'join'])->middleware(['auth'])->name('matching.join');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/', [GameController::class, 'index'])->name('index')->middleware('auth');
