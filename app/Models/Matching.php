@@ -9,6 +9,12 @@ class Matching extends Model
 {
     use HasFactory;
     
+    protected $fillable = [
+        'date',
+        'user_id',
+        'category_id',
+    ];
+    
     public function category()
     {
         return $this->belongsTo(Category::class);
@@ -16,6 +22,11 @@ class Matching extends Model
     
     public function users()
     {
-        return $this->hasMany(User::class);
+        return $this->belongsToMany(User::class);
+    }
+    
+    public function GetByMatching()
+    {   
+        return $this::with('category')->orderBy('updated_at', 'DESC')->get();
     }
 }

@@ -13,10 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('matchings', function (Blueprint $table) {
+        Schema::create('matching_user', function (Blueprint $table) {
             $table->id();
-            $table->string('date',20);
-            $table->foreignId('category_id')->constrained();
+            $table->foreignId('user_id')->constrained();
+            $table->foreignId('matching_id')->constrained();
+            $table->primary(['matching_id', 'user_id']);
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('matchings');
+        Schema::dropIfExists('matching_user');
     }
 };
