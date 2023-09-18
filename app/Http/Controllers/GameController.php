@@ -17,7 +17,9 @@ class GameController extends Controller
     
     public function show(Game $game, Comment $comment, Rate $rate)
     {   
-        return view('games/show')->with(['game' => $game, 'rates' => $rate->get(), 'comments' => $comment->getByUser()]);
+        $rate_avg = $rate->where('game_id', $game->id)->avg('rate');
+        $rate_avg = round($rate_avg);
+        return view('games/show')->with(['game' => $game, 'rate_avg' => $rate_avg, 'comments' => $comment->getByUser()]);
     }
     
     public function create()

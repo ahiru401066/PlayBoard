@@ -21,6 +21,9 @@
                     <x-nav-link :href="route('matching')" :active="request()->routeIs('matching')">
                         {{ __('Matching') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('map')" :active="request()->routeIs('map')">
+                        {{ __('Location') }}
+                    </x-nav-link>
                 </div>
             </div>
 

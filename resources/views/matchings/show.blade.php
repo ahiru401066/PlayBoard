@@ -23,10 +23,18 @@
             </div>
             <!--userの参加作成-->
             <div>
+                @if ($is_join)
+                <form action="/matchings/{{ $matching->id}}/cancel" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <input type="submit" value="参加取り消し">
+                </form>
+                @else
                 <form action="/matchings/{{ $matching->id}}/join" method="POST">
                     @csrf
                     <input type="submit" value="参加する">
                 </form>
+                @endif
             </div>
             
             <div class = "footer">

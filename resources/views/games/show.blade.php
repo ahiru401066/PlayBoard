@@ -35,7 +35,7 @@
                 @csrf
                 <div class="rate_body">
                     <h2>create Rate</h2>
-                    <textarea name="rate[rate]" placeholder="評価"></textarea>
+                    0<input type="range" name="rate[rate]" placeholder="評価" min="0" max="5">5
                 </div>
                 <input type="submit" value="store">
             </form>
@@ -46,9 +46,10 @@
                 @endforeach
             </div>
             <div>
-                @foreach($game->rates as $rate)
-                    <p>{{ $rate->rate }}</p>
-                @endforeach
+                <p>{{ $rate_avg }}</p>
+                @for ($i = 0; $i<$rate_avg; $i++)
+                    ★
+                @endfor
             </div>
             <div class="footer">
                 <div>#########################################</div>
