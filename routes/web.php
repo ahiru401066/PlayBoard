@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\LocationController;
 use App\Http\Controllers\MatchingController;
 use App\Http\Controllers\RateController;
 use Illuminate\Support\Facades\Route;
@@ -45,7 +46,9 @@ Route::get('/matchings/index', [MatchingController::class, 'index'])->middleware
 Route::post('/matchings/create', [MatchingController::class, 'store'])->middleware(['auth'])->name('matching.store');
 Route::get('/matchings/{matching}', [MatchingController::class, 'show'])->middleware(['auth'])->name('matching.show');
 Route::post('/matchings/{matching}/join', [MatchingController::class, 'join'])->middleware(['auth'])->name('matching.join');
-
+Route::delete('/matchings/{matching}/cancel', [MatchingController::class, 'cancel'])->middleware(['auth'])->name('matching.cancel');
+// map
+Route::get('/location/map', [LocationController::class, 'index'])->middleware(['auth'])->name('map');
 
 Route::middleware('auth')->group(function () {
     Route::get('/', [GameController::class, 'index'])->name('index')->middleware('auth');
