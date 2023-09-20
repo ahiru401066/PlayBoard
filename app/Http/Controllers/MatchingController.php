@@ -18,7 +18,7 @@ class MatchingController extends Controller
     public function store(Matching $matching, Request $request)
     {
         $matching_input = $request['matching'];
-        $matching_input += ['user_id' => $request->user()->id];
+        // $matching_input += ['user_id' => $request->user()->id];
         $matching->fill($matching_input)->save();
         return redirect('/matchings/index');
     }

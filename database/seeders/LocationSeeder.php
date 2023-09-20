@@ -22,7 +22,8 @@ class LocationSeeder extends Seeder
                 'comment' => 'これはコメントです',
                 'rate' => 5,
                 'site_url' => 'orz',
-                'locate' => 'wwwwwwwwwww',
+                'lat' => 35,
+                'lng' => 135,
                 'created_at' => new DateTime(),
                 'updated_at' => new DateTime(),
             ]);

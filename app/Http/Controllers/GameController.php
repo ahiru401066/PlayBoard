@@ -11,7 +11,7 @@ use App\Http\Requests\GameRequest;
 class GameController extends Controller
 {
     public function index(Game $game) 
-    {
+    {   
         return view('games/index')->with(['games' => $game->getPaginateByLimit()]);
     }
     

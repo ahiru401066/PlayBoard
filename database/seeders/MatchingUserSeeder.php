@@ -18,24 +18,9 @@ class MatchingUserSeeder extends Seeder
     {
         DB::table('matching_user')->insert([
                 'matching_id' => 1,
-                'user_id' => 2,
-                'created_at' => new DateTime(),
-                'updated_at' => new DateTime(),
-            ]);
-          
-        DB::table('matching_user')->insert([
-                'matching_id' => 1,
                 'user_id' => 1,
                 'created_at' => new DateTime(),
                 'updated_at' => new DateTime(),
             ]);
-          
-        DB::table('matching_user')->insert([
-                'matching_id' => 1,
-                'user_id' => 3,
-                'created_at' => new DateTime(),
-                'updated_at' => new DateTime(),
-            ]);
-          
     }
 }
