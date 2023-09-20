@@ -14,10 +14,22 @@
         <body>
             <h1>Board Game</h1>
             <h2>エリアの追加</h2>
+            <!--ユーザーのエリア登録-->
             <div>
-                
-                
-                
+                <form action="/location/store" method="POST">
+                    @csrf
+                    <div>
+                        <h2>エリア名</h2>
+                        <input type="text" name="location[name]" placeholder="場所の名前">
+                        <h2>エリア情報</h2>
+                        <input type="text" name="location[lat]" placeholder="場所の緯度を入力">
+                        <input type="text" name="location[lng]" placeholder="場所の経度を入力">
+                        <h2>レビュー</h2>
+                         0<input type="range" name="location[rate]" placeholder="評価" min="0" max="5">5
+                        <textarea name="location[comment]" placeholder="コメントサンプル"></textarea>
+                    </div>
+                    <input type="submit" value="store">
+                </form>
             </div>
             <div id="map" style="height:500px"></div>
              <script >

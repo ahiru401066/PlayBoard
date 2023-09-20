@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('name',20);
             $table->string('comment', 200);
             $table->string('rate', 1);
-            $table->string('site_url',100);
-            $table->float('lat');
+            $table->string('site_url',100)->nullable();
+            $table->float('lat');   
             $table->float('lng');
             $table->timestamps();
         });
