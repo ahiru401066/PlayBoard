@@ -49,6 +49,7 @@ Route::post('/matchings/{matching}/join', [MatchingController::class, 'join'])->
 Route::delete('/matchings/{matching}/cancel', [MatchingController::class, 'cancel'])->middleware(['auth'])->name('matching.cancel');
 // map
 Route::get('/location/map', [LocationController::class, 'index'])->middleware(['auth'])->name('map');
+Route::post('/location/store', [LocationController::class, 'store'])->middleware(['auth'])->name('map.store');
 
 Route::middleware('auth')->group(function () {
     Route::get('/', [GameController::class, 'index'])->name('index')->middleware('auth');
