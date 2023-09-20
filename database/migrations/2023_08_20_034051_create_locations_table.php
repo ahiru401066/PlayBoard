@@ -20,7 +20,8 @@ return new class extends Migration
             $table->string('comment', 200);
             $table->string('rate', 1);
             $table->string('site_url',100);
-            $table->string('locate', 100);
+            $table->float('lat');
+            $table->float('lng');
             $table->timestamps();
         });
     }

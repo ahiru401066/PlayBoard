@@ -18,7 +18,6 @@ class MatchingSeeder extends Seeder
     {
         DB::table('matchings')->insert([
                 'date' => '2000/00/00',
-                'user_id' => 1,
                 'category_id' => 1,
                 'created_at' => new DateTime(),
                 'updated_at' => new DateTime(),
