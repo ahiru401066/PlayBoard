@@ -10,8 +10,13 @@ class Game extends Model
     use HasFactory;
     
     protected $fillable = [
-        'title',
+        'name',
         'body',
+        'number',
+        'game_time',
+        'release',
+        'level',
+        'image_url',
         ];
     
     public function getPaginateByLimit(int $limit_count = 5)

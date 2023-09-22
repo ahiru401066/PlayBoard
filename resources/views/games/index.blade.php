@@ -20,6 +20,9 @@
                     </h2>
                     <p class="body">{{ $game->body }}</p>
                     <a href="/categories/{{ $game->category->id }}">{{ $game->category->category }}</a>
+                    <div>
+                        <img src="{{ $game->image_url }}" alt="画像が読み込めません。" />
+                    </div>
                     <form action="/games/{{ $game->id }}" id="form_{{ $game->id }}" method="post">
                         @csrf
                         @method('DELETE')

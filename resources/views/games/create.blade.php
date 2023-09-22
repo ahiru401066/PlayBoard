@@ -10,16 +10,29 @@
         </x-slot>
         <body>
             <h1>Board Game</h1>
-            <form action="/games" method="POST">
+            <form action="/games" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="title">
-                    <h2>Title</h2>
-                    <input type="text" name="game[title]" placeholder="タイトル">
-                    <p class="title__error" style="color:red">{{ $errors->first('game.title') }}</p>
+                    <h2>Name</h2>
+                    <input type="text" name="game[name]" placeholder="タイトル">
+                    <p class="name__error" style="color:red">{{ $errors->first('game.name') }}</p>
                 </div>
                 <div class="body">
                     <h2>Body</h2>
                     <textarea name="game[body]" placeholder="今日も1日お疲れ様でした。"></textarea>
+                </div>
+                <div>
+                    <p>number</p>
+                    <input type="text" name="game[number]">
+                    <p>game_time</p>
+                    <input type="text" name="game[game_time]">
+                    <p>release</p>
+                    <input type="text" name="game[release]">
+                    <p>level</p>
+                    <input type="text" name="game[level]">
+                </div>
+                <div class="image">
+                    <input type="file" name="image">
                 </div>
                 <input type="submit" value="store">
             </form>

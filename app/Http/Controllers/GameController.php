@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\GameRequest;
 use App\Models\Comment;
 use App\Models\Game;
 use App\Models\Rate;
-use App\Http\Requests\GameRequest;
+use Cloudinary;
 
 class GameController extends Controller
 {
@@ -28,8 +29,10 @@ class GameController extends Controller
     }
     
     public function store(Game $game, GameRequest $request)
-    {
+    {   
         $input = $request['game'];
+        $image_url = Cloudinary::upload($request->file('image')->getRealPath())->getSecurePath();
+        $input += ['image_url' => $image_url];
         $game->fill($input)->save();
         return redirect('/games/' . $game->id);
     }
