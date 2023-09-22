@@ -30,8 +30,8 @@ Route::get('/dashboard', function () {
 
 Route::controller(GameController::class)->middleware(['auth'])->group(function(){
     Route::get('/', 'index')->name('index');
-    Route::post('/games', 'store')->name('store');
     Route::get('/games/create', 'create')->name('create');
+    Route::post('/games', 'store')->name('store');
     Route::get('/games/{game}', 'show')->name('show');
     Route::put('/games/{game}', 'update')->name('update');
     Route::delete('/games/{game}', 'delete')->name('delete');
