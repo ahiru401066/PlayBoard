@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->string('age',3)->nullable();
-            $table->string('role',20)->nullable();
+            $table->integer('role')->nullable();
             $table->timestamps();
         });
     }
