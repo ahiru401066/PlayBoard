@@ -20,7 +20,7 @@
                     @csrf
                     <div>
                         <h2>エリア名</h2>
-                        <input type="text" name="location[name]" placeholder="場所の名前">
+                        <input id="map-search" type="text" name="location[name]" placeholder="場所の名前">
                         <h2>エリア情報</h2>
                         <input type="text" name="location[lat]" placeholder="場所の緯度を入力">
                         <input type="text" name="location[lng]" placeholder="場所の経度を入力">
@@ -33,11 +33,12 @@
             </div>
             <div id="map" style="height:500px"></div>
              <script >
-                 function initMap() {
+                 function initAutocomplete() {
+                    map = document.getElementById("map");
+                    
                     const locate = @json($locates);
                     console.log(locate,'test');
                     // welcome.blade.phpで描画領域を設定するときに、id=mapとしたため、その領域を取得し、mapに格納します。
-                    map = document.getElementById("map");
                     // 東京タワーの緯度は35.6585769,経度は139.7454506と事前に調べておいた
 
                     opt = {
@@ -67,7 +68,7 @@
                     }
                 }
              </script>
-             <script src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key=AIzaSyDlv0qH9dGsT5mrX08OscaJHPMvsbYL_Nw&callback=initMap" async defer>
+             <script src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key={{ config("services.google-map.apikey" )}}&callback=initAutocomplete&libraries=places" async defer>
 	         </script>
         </body>
     </x-app-layout>
