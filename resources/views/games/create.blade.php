@@ -22,6 +22,13 @@
                     <textarea name="game[body]" placeholder="今日も1日お疲れ様でした。"></textarea>
                 </div>
                 <div>
+                    <select name="game[category_id]">
+                        @foreach($categories as $category)
+                            <option value="{{ $category->id }}">{{ $category->category }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div>
                     <p>number</p>
                     <input type="text" name="game[number]">
                     <p>game_time</p>

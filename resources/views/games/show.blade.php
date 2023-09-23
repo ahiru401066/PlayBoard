@@ -15,6 +15,9 @@
             <h1 class="title">
                 {{ $game->name }}
             </h1>
+            <div>
+                <img src="{{ $game->image_url }}" alt="画像が読み込めません。" />
+            </div>
             <div class="content">
                 <div class="content__game">
                     <h3>本文</h3>
