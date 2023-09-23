@@ -56,7 +56,9 @@
             </div>
             <div class="footer">
                 <div>#########################################</div>
+                @can('admin-higher')
                 <div class="edit"><a href="/games/{{ $game->id }}/edit">edit</a></div>
+                @endcan
                 <a href="/">戻る</a>
             </div>
         </body>
