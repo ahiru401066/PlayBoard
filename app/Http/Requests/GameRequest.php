@@ -20,7 +20,7 @@ class GameRequest extends FormRequest
     public function rules()
     {
         return [
-            'game.title' => 'required|string|max:100',
+            'game.name' => 'required|string|max:100',
             'game.body' => 'required|string|max:4000',
         ];
     }

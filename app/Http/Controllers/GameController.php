@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\GameRequest;
+use App\Models\Category;
 use App\Models\Comment;
 use App\Models\Game;
 use App\Models\Rate;
@@ -23,9 +24,9 @@ class GameController extends Controller
         return view('games/show')->with(['game' => $game, 'rate_avg' => $rate_avg, 'comments' => $comment->getByUser()]);
     }
     
-    public function create()
+    public function create(Category $category)
     {
-        return view('games/create');
+        return view('games/create')->with(['categories' => $category->get()]);
     }
     
     public function store(Game $game, GameRequest $request)
