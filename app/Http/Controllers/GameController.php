@@ -38,9 +38,9 @@ class GameController extends Controller
         return redirect('/games/' . $game->id);
     }
     
-    public function edit(Game $game)
-    {
-        return view('games/edit')->with(['game' => $game]);
+    public function edit(Game $game, Category $category)
+    {   
+        return view('/games/edit')->with(['game' => $game, 'categories' => $category->get()]);
     }
     
     public function update(GameRequest $request, Game $game)

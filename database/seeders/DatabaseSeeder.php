@@ -22,8 +22,6 @@ class DatabaseSeeder extends Seeder
         $this->call(CategorySeeder::class);
         $this->call(MatchingSeeder::class);
         $this->call(GameSeeder::class);
-        $this->call(CommentSeeder::class);
-        $this->call(RateSeeder::class);
         $this->call(MatchingUserSeeder::class);
         // \App\Models\User::factory(10)->create();
 
