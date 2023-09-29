@@ -36,7 +36,23 @@
                 </form>
                 @endif
             </div>
-            
+            <!--userの意見交換作成-->
+            <div>
+                <form action="/matchings/{{ $matching->id }}/opinion" method="POST">
+                    @csrf
+                    <div class="comment_body">
+                        <h2>opinion</h2>
+                        <textarea name="opinion[opinion]" placeholder="コメントサンプル"></textarea>
+                    </div>
+                    <input type="submit" value="store">
+                </form>
+            </div>
+            <div>
+                @foreach($matching->opinions as $opinion)
+                    <p>{{ $opinion->user->name }}</p>
+                    <p>{{ $opinion->opinion}}</p>
+                @endforeach
+            </div>
             <div class = "footer">
                 <a href="/matchings/index">戻る</a>
             </div>

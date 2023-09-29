@@ -12,7 +12,7 @@ class MatchingController extends Controller
 {
     public function index(Category $category, Matching $matching)
     {
-        return view('matchings/index')->with(['categories' => $category->get(), 'matchings' => $matching->GetByMatching()]);
+        return view('matchings/index')->with(['categories' => $category->get(), 'matchings' => $matching->getPaginateByLimit()]);
     }
     
     public function store(Matching $matching, Request $request)
@@ -40,6 +40,12 @@ class MatchingController extends Controller
     {   
         $matching->users()->detach($request->user()->id);
         return redirect('/matchings/'. $matching->id );
+    }
+    
+    public function delete(Matching $matching)
+    {
+        $matching->delete();
+        return redirect('/matchings/');
     }
     
 }

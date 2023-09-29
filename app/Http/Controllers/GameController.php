@@ -38,16 +38,17 @@ class GameController extends Controller
         return redirect('/games/' . $game->id);
     }
     
-    public function edit(Game $game)
-    {
-        return view('games/edit')->with(['game' => $game]);
+    public function edit(Game $game, Category $category)
+    {   
+        return view('/games/edit')->with(['game' => $game, 'categories' => $category->get()]);
     }
     
     public function update(GameRequest $request, Game $game)
     {
         $input_game = $request['game'];
+        $image_url = Cloudinary::upload($request->file('image')->getRealPath())->getSecurePath();
+        $input_game += ['image_url' => $image_url];
         $game->fill($input_game)->save();
-        
         return redirect('/games/' . $game->id);
     }
     

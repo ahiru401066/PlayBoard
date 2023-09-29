@@ -6,6 +6,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\MatchingController;
+use App\Http\Controllers\OpinionController;
 use App\Http\Controllers\RateController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,12 +31,12 @@ Route::get('/dashboard', function () {
 
 Route::controller(GameController::class)->middleware(['auth'])->group(function(){
     Route::get('/', 'index')->name('index');
-    Route::get('/games/create', 'create')->name('create');
     Route::post('/games', 'store')->name('store');
+    Route::get('/games/create', 'create')->name('create');
     Route::get('/games/{game}', 'show')->name('show');
+    Route::get('/games/{game}/edit', 'edit')->name('edit');
     Route::put('/games/{game}', 'update')->name('update');
     Route::delete('/games/{game}', 'delete')->name('delete');
-    Route::get('/games/{game}/edit', 'edit')->name('edit');
 });
 
 Route::get('/categories/{category}', [CategoryController::class, 'index'])->middleware("auth");
@@ -47,6 +48,10 @@ Route::post('/matchings/create', [MatchingController::class, 'store'])->middlewa
 Route::get('/matchings/{matching}', [MatchingController::class, 'show'])->middleware(['auth'])->name('matching.show');
 Route::post('/matchings/{matching}/join', [MatchingController::class, 'join'])->middleware(['auth'])->name('matching.join');
 Route::delete('/matchings/{matching}/cancel', [MatchingController::class, 'cancel'])->middleware(['auth'])->name('matching.cancel');
+Route::delete('/matchings/{matching}', [MatchingController::class, 'delete'])->middleware(['auth'])->name('matching.delete');
+// opinion
+Route::post('/matchings/{matching}/opinion',[OpinionController::class, 'store'])->middleware(['auth'])->name('matching.store');
+
 // map
 Route::get('/location/map', [LocationController::class, 'index'])->middleware(['auth'])->name('map');
 Route::post('/location/store', [LocationController::class, 'store'])->middleware(['auth'])->name('map.store');

@@ -24,6 +24,13 @@
                     <p>{{ $game->body }}</p>
                 </div>   
             </div>
+            <div>
+                <p>適正人数：{{ $game->number }}</p>
+                <p>ゲームの時間：{{ $game->game_time }}</p>
+                <p>発売日：{{ $game->release }}</p>
+                <p>難易度：{{ $game->level }}</p>
+                <p>ゲームのカテゴリー：{{ $game->category->category }}</p>
+            </div>
             <!--コメント入力-->
             <form action="/games/{{ $game->id }}/comment" method="POST">
                 @csrf

@@ -7,25 +7,48 @@
         <link href="https://fonts.googleapis.cm/css?family=Nunito:200,600" rel="stylesheet">
     </head>
     <x-app-layout>
-        <x-solt name="header">
+        <x-slot name="header">
             edit
-        </x-solt>
+        </x-slot>
         <body>
             <h1 class="title">編集画面</h1>
             <div class="content">
-                <form action="/games/{{ $game->id }}" method="POST">
+                <form action="/games/{{ $game->id }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
-                    <div class='content__title'>
+                    <div class='title'>
                         <h2>タイトル</h2>
-                        <input type='text' name='game[title]' value="{{ $game->title }}">
+                        <input type='text' name='game[name]' value="{{ $game->name }}">
                     </div>
-                    <div class='content__body'>
+                    <div class='body'>
                         <h2>本文</h2>
-                        <input type='text' name='game[body]' value="{{ $game->body }}">
+                        <textarea type='text' name='game[body]'>{{ $game->body }}</textarea>
+                    </div>
+                    <div>
+                        <select name="game[category_id]">
+                            @foreach($categories as $category)
+                                <option value="{{ $category->id }}">{{ $category->category }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div>
+                        <p>number</p>
+                        <input type="text" name="game[number]" value="{{ $game->number }}">
+                        <p>game_time</p>
+                        <input type="text" name="game[game_time]" value="{{ $game->game_time }}">
+                        <p>release</p>
+                        <input type="text" name="game[release]" value="{{ $game->release }}">
+                        <p>level</p>
+                        <input type="text" name="game[level]" value="{{ $game->level }}">
+                    </div>
+                    <div class="image">
+                        <input type="file" name="image">
                     </div>
                     <input type="submit" value="保存">
                 </form>
+            </div>
+            <div class="footer">
+                <a href="/games/{{ $game->id }}">戻る</a>
             </div>
         </body>
     </x-app-layout>

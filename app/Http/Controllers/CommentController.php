@@ -1,13 +1,15 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Http\Requests\CommentRequest;
 use App\Models\Comment;
 use App\Models\Game;
 use Illuminate\Http\Request;
 
 class CommentController extends Controller
 {
-    public function store(Comment $comment, Game $game, Request $request)
+    public function store(Comment $comment, Game $game, CommentRequest $request)
     {
         $comment_input = $request['comment'];
         $comment_input += ['user_id' => $request->user()->id];

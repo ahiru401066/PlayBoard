@@ -15,6 +15,11 @@ class Matching extends Model
         'category_id',
     ];
     
+    public function getPaginateByLimit(int $limit_count = 5)
+    {
+        return $this->orderBy('updated_at', 'DESC')->paginate($limit_count);
+    }
+    
     public function category()
     {
         return $this->belongsTo(Category::class);
@@ -28,5 +33,10 @@ class Matching extends Model
     public function GetByMatching()
     {   
         return $this::with('category')->orderBy('updated_at', 'DESC')->get();
+    }
+    
+    public function opinions()
+    {
+        return $this->hasMany(Opinion::class);
     }
 }

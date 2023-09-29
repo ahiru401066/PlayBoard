@@ -63,4 +63,9 @@ class User extends Authenticatable
     {
         return $this->belongsTo(Location::class);
     }
+    
+    public function opinions()
+    {
+        return $this->hasMany(Comment::class);
+    }
 }
