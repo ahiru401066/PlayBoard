@@ -13,7 +13,7 @@
         <body>
             <h1 class="title">編集画面</h1>
             <div class="content">
-                <form action="/games/{{ $game->id }}" method="POST">
+                <form action="/games/{{ $game->id }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     <div class='title'>
@@ -22,7 +22,7 @@
                     </div>
                     <div class='body'>
                         <h2>本文</h2>
-                        <textarea type='text' name='game[body]' value="{{ $game->body }}"></textarea> 
+                        <textarea type='text' name='game[body]'>{{ $game->body }}</textarea>
                     </div>
                     <div>
                         <select name="game[category_id]">
@@ -33,13 +33,13 @@
                     </div>
                     <div>
                         <p>number</p>
-                        <input type="text" name="game[number]">
+                        <input type="text" name="game[number]" value="{{ $game->number }}">
                         <p>game_time</p>
-                        <input type="text" name="game[game_time]">
+                        <input type="text" name="game[game_time]" value="{{ $game->game_time }}">
                         <p>release</p>
-                        <input type="text" name="game[release]">
+                        <input type="text" name="game[release]" value="{{ $game->release }}">
                         <p>level</p>
-                        <input type="text" name="game[level]">
+                        <input type="text" name="game[level]" value="{{ $game->level }}">
                     </div>
                     <div class="image">
                         <input type="file" name="image">

@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('game_time',10);
             $table->string('release',30);
             $table->string('level',10);
-            $table->string('image_url')->nullable;
+            $table->string('image_url')->nullable();
             $table->foreignId('category_id')->constrained();
             $table->timestamps();
             // $table->string('rule_type',30);

@@ -46,8 +46,9 @@ class GameController extends Controller
     public function update(GameRequest $request, Game $game)
     {
         $input_game = $request['game'];
+        $image_url = Cloudinary::upload($request->file('image')->getRealPath())->getSecurePath();
+        $input_game += ['image_url' => $image_url];
         $game->fill($input_game)->save();
-        
         return redirect('/games/' . $game->id);
     }
     
