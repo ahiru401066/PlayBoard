@@ -14,14 +14,14 @@
             <h1>Board Game</h1>
             <div class="games">
                 @foreach ($games as $game)
-                <div class="game">
+                <div class="game bg-orange-200">
                     <h2 class='title'>
                         <a href="/games/{{ $game->id }}">{{ $game->name }}</a>
                     </h2>
                     <p class="body">{{ $game->body }}</p>
                     <a href="/categories/{{ $game->category->id }}">{{ $game->category->category }}</a>
                     <div>
-                        <img src="{{ $game->image_url }}" alt="画像が読み込めません。" />
+                        <img data:image/png;base64,src="{{ $game->image_url }}" alt="画像が読み込めません。" />
                     </div>
                     @can('admin-higher')
                     <form action="/games/{{ $game->id }}" id="form_{{ $game->id }}" method="post">
