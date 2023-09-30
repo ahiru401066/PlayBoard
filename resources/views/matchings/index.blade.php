@@ -14,7 +14,7 @@
             <h1>Matchingの作成</h1>
             <form action="/matchings/create" method="POST">
                 @csrf
-                <div>
+                <div class="bg-gray-300">
                     <select name="matching[category_id]">
                         @foreach($categories as $category)
                             <option value="{{ $category->id }}">{{ $category->category }}</option>
