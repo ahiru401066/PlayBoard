@@ -16,7 +16,7 @@
                 {{ $game->name }}
             </h1>
             <div>
-                <img data:image/png;base64,src="{{ $game->image_url }}" alt="画像が読み込めません。" />
+                <img data:image/png;base64 src="{{ $game->image_url }}" alt="画像が読み込めません。" />
             </div>
             <div class="content">
                 <div class="content__game">

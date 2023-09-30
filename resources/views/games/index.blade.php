@@ -21,7 +21,7 @@
                     <p class="body">{{ $game->body }}</p>
                     <a href="/categories/{{ $game->category->id }}">{{ $game->category->category }}</a>
                     <div>
-                        <img data:image/png;base64,src="{{ $game->image_url }}" alt="画像が読み込めません。" />
+                        <img data:image/png;base64 src="{{ $game->image_url }}" alt="画像が読み込めません。" />
                     </div>
                     @can('admin-higher')
                     <form action="/games/{{ $game->id }}" id="form_{{ $game->id }}" method="post">
