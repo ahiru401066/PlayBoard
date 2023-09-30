@@ -16,20 +16,13 @@
                 {{ $game->name }}
             </h1>
             <div>
-                <img src="{{ $game->image_url }}" alt="画像が読み込めません。" />
+                <img data:image/png;base64,src="{{ $game->image_url }}" alt="画像が読み込めません。" />
             </div>
             <div class="content">
                 <div class="content__game">
                     <h3>本文</h3>
                     <p>{{ $game->body }}</p>
                 </div>   
-            </div>
-            <div>
-                <p>適正人数：{{ $game->number }}</p>
-                <p>ゲームの時間：{{ $game->game_time }}</p>
-                <p>発売日：{{ $game->release }}</p>
-                <p>難易度：{{ $game->level }}</p>
-                <p>ゲームのカテゴリー：{{ $game->category->category }}</p>
             </div>
             <!--コメント入力-->
             <form action="/games/{{ $game->id }}/comment" method="POST">
