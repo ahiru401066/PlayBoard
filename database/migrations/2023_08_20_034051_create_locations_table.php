@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained();
             $table->string('name',20);
             $table->string('comment', 200);
-            $table->string('rate', 1);
+            $table->float('rate');
             $table->string('site_url',100)->nullable();
             $table->float('lat');   
             $table->float('lng');
