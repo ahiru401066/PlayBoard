@@ -8,19 +8,20 @@
     </head>
     <x-app-layout>
         <x-slot name="header">
-            index
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">Board Game</h2>
         </x-slot>
         <body>
             <div class="max-w-6xl mx-auto rounded-sm">
-                <h1 class="text-6xl bg-slate-200 w-96 px-8 mx-auto my-2 border-slate-500 border-2">BoardGame</h1>
-                <div class="bg-slate-200 flex flex-wrap p-8">
+                <h1 class="text-6xl text-emerald-900 w-96 px-8 mx-auto my-2">BoardGame</h1>
+                <div class="flex flex-wrap p-8">
                     @foreach ($games as $game)
-                    <div class="bg-indigo-200 border-2 border-cyan-200 p-8 md:m-2 w-80 flex-1">
-                        <h2 class='w-80'>
+                    <div class=" border-2 border-gray-600 p-8 md:m-2 w-80 flex-1">
+                        <h2 class='w-80 text-3xl flex justify-center'>
                             <a href="/games/{{ $game->id }}">{{ $game->name }}</a>
                         </h2>
-                        <p class="body">{{ $game->body }}</p>
-                        <a href="/categories/{{ $game->category->id }}">{{ $game->category->category }}</a>
+                        <div class="flex items-center justify-end">
+                            <a href="/categories/{{ $game->category->id }}">{{ $game->category->category }}</a>
+                        </div>
                         <div class="max-w-xs">
                             <img data:image/png;base64 src="{{ $game->image_url }}" alt="画像が読み込めません。" />
                         </div>

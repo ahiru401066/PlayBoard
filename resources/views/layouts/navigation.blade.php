@@ -16,13 +16,13 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                     <x-nav-link :href="route('index')" :active="request()->routeIs('index')">
-                        {{ __('Index') }}
+                        {{ __('Board Game') }}
                     </x-nav-link>
                     <x-nav-link :href="route('matching')" :active="request()->routeIs('matching')">
                         {{ __('Matching') }}
                     </x-nav-link>
                     <x-nav-link :href="route('map')" :active="request()->routeIs('map')">
-                        {{ __('Location') }}
+                        {{ __('Map') }}
                     </x-nav-link>
                 </div>
             </div>

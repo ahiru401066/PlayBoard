@@ -4,7 +4,11 @@
 
     <form method="POST" action="{{ route('login') }}">
         @csrf
-
+        
+        <div class="text-emerald-900 flex justify-center">
+            <h1 class="text-6xl ml-3">PlayBoard</h1>
+        </div>
+        
         <!-- Email Address -->
         <div>
             <x-input-label for="email" :value="__('Email')" />

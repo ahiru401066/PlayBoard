@@ -8,7 +8,7 @@
     </head>
     <x-app-layout>
         <x-slot name="header">
-            Matching
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">Matching</h2>
         </x-slot>
         <body>
             <h1>Matchingの作成</h1>
