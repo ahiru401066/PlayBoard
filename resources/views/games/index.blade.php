@@ -15,7 +15,7 @@
                 <h1 class="text-6xl text-emerald-900 w-96 px-8 mx-auto my-2">BoardGame</h1>
                 <div class="flex flex-wrap p-8">
                     @foreach ($games as $game)
-                    <div class=" border-2 border-gray-600 p-8 md:m-2 w-80 flex-1">
+                    <div class="border-2 border-gray-600 p-8 md:m-2 w-80 flex-1">
                         <h2 class='w-80 text-3xl flex justify-center'>
                             <a href="/games/{{ $game->id }}">{{ $game->name }}</a>
                         </h2>

@@ -12,7 +12,7 @@
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">map</h2>
         </x-slot>
         <body>
-            <div class="m-10 p-2 border-2 border-gray-600 w-9/12">
+            <div class="m-10 p-2 border-2 bg-green-100 w-9/12">
                 <h2 class="text-3xl font-semibold">エリアの追加</h2>
                 <div>
                     <form action="/location/store" method="POST">
@@ -25,9 +25,11 @@
                             <input type="text" name="location[lng]" placeholder="場所の経度を入力">
                             <h2>レビュー</h2>
                              0<input type="range" name="location[rate]" placeholder="評価" min="0" max="5">5
-                            <textarea name="location[comment]" placeholder="コメントサンプル"></textarea>
+                            <textarea name="location[comment]" placeholder="コメントサンプル" class="w-96"></textarea>
                         </div>
-                        <input type="submit" value="保存" class="m-1">
+                        <x-primary-button class="ml-5 mb-5">
+                        <input type="submit" value="保存" class="m-1 cursor-pointer text-slate-50">
+                        </x-primary-button>
                     </form>
                 </div>
             </div>
