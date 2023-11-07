@@ -8,30 +8,33 @@
     </head>
     <x-app-layout>
         <x-slot name="header">
-            index
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">Board Game</h2>
         </x-slot>
         <body>
-            <h1>Board Game</h1>
-            <div class="games">
-                @foreach ($games as $game)
-                <div class="game bg-orange-200">
-                    <h2 class='title'>
-                        <a href="/games/{{ $game->id }}">{{ $game->name }}</a>
-                    </h2>
-                    <p class="body">{{ $game->body }}</p>
-                    <a href="/categories/{{ $game->category->id }}">{{ $game->category->category }}</a>
-                    <div>
-                        <img data:image/png;base64 src="{{ $game->image_url }}" alt="画像が読み込めません。" />
+            <div class="max-w-6xl mx-auto rounded-sm">
+                <h1 class="text-6xl text-emerald-900 w-96 px-8 mx-auto my-2">BoardGame</h1>
+                <div class="flex flex-wrap p-8">
+                    @foreach ($games as $game)
+                    <div class="border-2 border-gray-600 p-8 md:m-2 w-80 flex-1">
+                        <h2 class='w-80 text-3xl flex justify-center'>
+                            <a href="/games/{{ $game->id }}">{{ $game->name }}</a>
+                        </h2>
+                        <div class="flex items-center justify-end">
+                            <a href="/categories/{{ $game->category->id }}">{{ $game->category->category }}</a>
+                        </div>
+                        <div class="max-w-xs">
+                            <img data:image/png;base64 src="{{ $game->image_url }}" alt="画像が読み込めません。" />
+                        </div>
+                        @can('admin-higher')
+                        <form action="/games/{{ $game->id }}" id="form_{{ $game->id }}" method="post">
+                            @csrf
+                            @method('DELETE')
+                            <button type="button" onclick="deletePost({{ $game->id }})">delete</button>
+                        </form>
+                        @endcan
                     </div>
-                    @can('admin-higher')
-                    <form action="/games/{{ $game->id }}" id="form_{{ $game->id }}" method="post">
-                        @csrf
-                        @method('DELETE')
-                        <button type="button" onclick="deletePost({{ $game->id }})">delete</button>
-                    </form>
-                    @endcan
+                    @endforeach
                 </div>
-                @endforeach
             </div>
             <dev class='paginate'>
                 {{ $games->links() }}

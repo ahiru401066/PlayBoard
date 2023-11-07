@@ -9,29 +9,35 @@
     </head>
     <x-app-layout>
         <x-slot name="header">
-            map
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">map</h2>
         </x-slot>
         <body>
-            <h1>Board Game</h1>
-            <h2>エリアの追加</h2>
-            <!--ユーザーのエリア登録-->
-            <div>
-                <form action="/location/store" method="POST">
-                    @csrf
-                    <div>
-                        <h2>エリア名</h2>
-                        <input id="map-search" type="text" name="location[name]" placeholder="場所の名前">
-                        <h2>エリア情報</h2>
-                        <input type="text" name="location[lat]" placeholder="場所の緯度を入力">
-                        <input type="text" name="location[lng]" placeholder="場所の経度を入力">
-                        <h2>レビュー</h2>
-                         0<input type="range" name="location[rate]" placeholder="評価" min="0" max="5">5
-                        <textarea name="location[comment]" placeholder="コメントサンプル"></textarea>
-                    </div>
-                    <input type="submit" value="store">
-                </form>
+            <div class="m-10 p-2 border-2 bg-green-100 w-9/12">
+                <h2 class="text-3xl font-semibold">エリアの追加</h2>
+                <div>
+                    <form action="/location/store" method="POST">
+                        @csrf
+                        <div>
+                            <h2>エリア名</h2>
+                            <input id="map-search" type="text" name="location[name]" placeholder="場所の名前">
+                            <h2>エリア情報</h2>
+                            <input type="text" name="location[lat]" placeholder="場所の緯度を入力">
+                            <input type="text" name="location[lng]" placeholder="場所の経度を入力">
+                            <h2>レビュー</h2>
+                             0<input type="range" name="location[rate]" placeholder="評価" min="0" max="5">5
+                            <textarea name="location[comment]" placeholder="コメントサンプル" class="w-96"></textarea>
+                        </div>
+                        <x-primary-button class="ml-5 mb-5">
+                        <input type="submit" value="保存" class="m-1 cursor-pointer text-slate-50">
+                        </x-primary-button>
+                    </form>
+                </div>
             </div>
-            <div id="map" style="height:500px"></div>
+            <!--ユーザーのエリア閲覧-->
+            <div class="mx-10">
+                <h2 class="text-3xl font-semibold mb-3">エリアを探す</h2>
+                <div id="map" style="height:500px"></div>
+            </div>
              <script >
                  function initAutocomplete() {
                     map = document.getElementById("map");

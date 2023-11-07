@@ -4,7 +4,11 @@
 
     <form method="POST" action="{{ route('login') }}">
         @csrf
-
+        
+        <div class="text-emerald-900 flex justify-center">
+            <h1 class="text-6xl ml-3">PlayBoard</h1>
+        </div>
+        
         <!-- Email Address -->
         <div>
             <x-input-label for="email" :value="__('Email')" />
@@ -44,4 +48,11 @@
             </x-primary-button>
         </div>
     </form>
+    
+    <!--register-->
+    <div class="flex items-center justify-end my-3">
+        <x-primary-button class=" ml-3 p-0">
+            <a href="auth/register">register</a>
+        </x-primary-button>
+    </div>
 </x-guest-layout>
