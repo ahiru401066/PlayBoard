@@ -51,7 +51,7 @@
     
     <!--register-->
     <div class="flex items-center justify-end my-3">
-        <x-primary-button class=" ml-3 p-0">
+        <x-primary-button class="ml-3 p-0">
             <a href="auth/register">register</a>
         </x-primary-button>
     </div>
