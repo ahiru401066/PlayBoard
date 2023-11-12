@@ -34,8 +34,10 @@
                             </form>
                             <div>
                                 @foreach($matching->opinions as $opinion)
+                                <div class="border border-gray-600 p-4 mb-2">
                                     <p>{{ $opinion->user->name }}</p>
                                     <p class="w-96">{{ $opinion->opinion}}</p>
+                                </div>
                                 @endforeach
                             </div>
                         </div>
