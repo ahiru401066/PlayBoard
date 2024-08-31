@@ -1,59 +1,67 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <title>BoardGame</title>
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BoardGame</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.4/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-900">
     <x-app-layout>
         <x-slot name="header">
-            <h2 class="font-semibold text-xl text-white leading-tight header-bg p-4">Board Game</h2>
-        </x-slot>
-        <body>
-            <div class="max-w-6xl mx-auto rounded-sm p-4">
-                <h1 class="text-6xl text-green-900 w-96 px-8 mx-auto my-4">BoardGame</h1>
-                <div class="flex flex-wrap p-8">
-                    @foreach ($games as $game)
-                    <div class="border-2 card-border p-8 md:m-2 w-80 flex-1 rounded-lg card-bg shadow-md">
-                        <h2 class='w-80 text-3xl flex justify-center text-green-900'>
-                            <a href="/games/{{ $game->id }}" class="hover:text-green-700">{{ $game->name }}</a>
-                        </h2>
-                        <div class="flex items-center justify-end text-green-600">
-                            <a href="/categories/{{ $game->category->id }}">{{ $game->category->category }}</a>
-                        </div>
-                        <div class="max-w-xs mt-4">
-                            <img data:image/png;base64 src="{{ $game->image_url }}" alt="画像が読み込めません。" class="rounded-lg shadow-sm" />
-                        </div>
-                        @can('admin-higher')
-                        <form action="/games/{{ $game->id }}" id="form_{{ $game->id }}" method="post" class="mt-4">
-                            @csrf
-                            @method('DELETE')
-                            <button type="button" class="btn-delete rounded p-2 shadow-md hover:bg-red-600" onclick="deletePost({{ $game->id }})">Delete</button>
-                        </form>
-                        @endcan
-                    </div>
-                    @endforeach
-                </div>
+            <div class="bg-green-800 text-white py-4 px-6 rounded-lg shadow-md text-center">
+                <h2 class="text-xl font-semibold">Game</h2>
             </div>
-            <div class='paginate flex justify-center mt-8'>
+        </x-slot>
+
+        <div class="max-w-6xl mx-auto p-4">
+            <h1 class="text-6xl text-green-900 text-center my-4">BoardGame</h1>
+            <div class="flex flex-wrap p-4">
+                @foreach ($games as $game)
+                <div class="border border-gray-200 bg-white p-6 md:m-2 w-full md:w-80 flex-1 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                    <h2 class='text-3xl text-green-900 text-center mb-2'>
+                        <a href="/games/{{ $game->id }}" class="hover:text-green-700">{{ $game->name }}</a>
+                    </h2>
+                    <div class="text-green-600 text-center mb-4">
+                        <a href="/categories/{{ $game->category->id }}" class="hover:text-green-800">{{ $game->category->category }}</a>
+                    </div>
+                    <div class="max-w-xs mx-auto mb-4">
+                        <img src="{{ $game->image_url }}" alt="画像が読み込めません。" class="w-full h-auto rounded-lg shadow-sm" />
+                    </div>
+                    @can('admin-higher')
+                    <form action="/games/{{ $game->id }}" id="form_{{ $game->id }}" method="post" class="text-center mt-4">
+                        @csrf
+                        @method('DELETE')
+                        <button type="button" class="bg-red-600 text-white rounded p-2 shadow-md hover:bg-red-700 transition" onclick="deletePost({{ $game->id }})">Delete</button>
+                    </form>
+                    @endcan
+                </div>
+                @endforeach
+            </div>
+            
+            <div class='flex justify-center mt-8'>
                 {{ $games->links() }}
             </div>
+            
             @can('admin-higher')
             <div class="flex justify-center mt-8">
-                <a href='/games/create' class="btn-create rounded p-3 shadow-lg hover:bg-green-500">Create</a>
+                <a href='/games/create' class="bg-green-600 text-white rounded p-3 shadow-lg hover:bg-green-700 transition">Create</a>
             </div>
             @endcan
-            
-            <script>
-                function deletePost(id) {
-                    'use strict';
-                    
-                    if (confirm('削除すると復元できません。\n本当に削除しますか?')) {
-                        document.getElementById(`form_${id}`).submit();
-                    }
-                }
-            </script>
-        </body>
+        </div>
     </x-app-layout>
+
+    <script>
+        function deletePost(id) {
+            'use strict';
+            
+            if (confirm('削除すると復元できません。\n本当に削除しますか?')) {
+                document.getElementById(`form_${id}`).submit();
+            }
+        }
+    </script>
+</body>
 </html>
