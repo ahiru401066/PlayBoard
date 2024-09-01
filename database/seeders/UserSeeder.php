@@ -30,7 +30,7 @@ class UserSeeder extends Seeder
         DB::table('users')->insert([
                 'name' => 'user1',
                 'email' => 'a@a',
-                'password' => Hash::make('testtest'),
+                'password' => Hash::make('password'),
                 'age' => '21',
                 'role' => 0,
                 'created_at' => new DateTime(),
