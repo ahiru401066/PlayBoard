@@ -20,7 +20,7 @@
             <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
                 <h1 class="text-3xl font-bold text-green-800 mb-4">Matching</h1>
                 <div class="text-lg font-medium text-gray-700 mb-2">
-                    <p>Matching ID: {{ $matching->id }}</p>
+                    <p>マッチング部屋 {{ $matching->id }}</p>
                     <p>日時：{{ $matching->date }}</p>
                 </div>
             </div>
