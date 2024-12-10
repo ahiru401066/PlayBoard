@@ -18,9 +18,8 @@
         <div class="max-w-4xl mx-auto p-6">
             <!-- Matching Details -->
             <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
-                <h1 class="text-3xl font-bold text-green-800 mb-4">Matching</h1>
+                <h1 class="text-3xl font-bold text-green-800 mb-4">マッチング部屋 {{ $matching->id }}</h1>
                 <div class="text-lg font-medium text-gray-700 mb-2">
-                    <p>マッチング部屋 {{ $matching->id }}</p>
                     <p>日時：{{ $matching->date }}</p>
                 </div>
             </div>
