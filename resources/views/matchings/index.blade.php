@@ -37,7 +37,7 @@
                 <h1 class="text-2xl font-bold text-green-700 mb-4">Matchingに参加</h1>
                 @foreach ($matchings as $matching)
                     <div class="bg-green-50 border border-green-200 p-4 rounded-lg shadow-sm mb-4">
-                        <a href="/matchings/{{ $matching->id }}" class="text-xl font-semibold text-green-600 hover:underline">{{ $matching->id }} - {{ $matching->category->category }}</a>
+                        <a href="/matchings/{{ $matching->id }}" class="text-xl font-semibold text-green-600 hover:underline">マッチング部屋{{ $matching->id }} - {{ $matching->category->category }}</a>
                         <p class="text-gray-700">{{ $matching->date }}</p>
                     </div>
                 @endforeach
