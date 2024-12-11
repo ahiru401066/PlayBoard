@@ -47,18 +47,6 @@
                 <!-- Additional Fields -->
                 <div class="grid grid-cols-2 gap-4">
                     <div>
-                        <label for="number" class="block text-lg font-semibold text-gray-700 mb-2">Number</label>
-                        <input type="text" id="number" name="game[number]" class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500" />
-                    </div>
-                    <div>
-                        <label for="game_time" class="block text-lg font-semibold text-gray-700 mb-2">Game Time</label>
-                        <input type="text" id="game_time" name="game[game_time]" class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500" />
-                    </div>
-                    <div>
-                        <label for="release" class="block text-lg font-semibold text-gray-700 mb-2">Release</label>
-                        <input type="text" id="release" name="game[release]" class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500" />
-                    </div>
-                    <div>
                         <label for="level" class="block text-lg font-semibold text-gray-700 mb-2">Level</label>
                         <input type="text" id="level" name="game[level]" class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500" />
                     </div>
