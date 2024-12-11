@@ -19,9 +19,6 @@ class GameSeeder extends Seeder
         DB::table('games')->insert([
                 'name' => 'ボードゲーム1',
                 'body' => 'ボードゲーム1の説明です！',
-                'number' => '2 ~ 4',
-                'game_time' => '20 ~ 40',
-                'release' => '2000/00/00',
                 'level' => 'Easy',
                 'category_id' => 1,
                 'created_at' => new DateTime(),
@@ -31,9 +28,6 @@ class GameSeeder extends Seeder
         DB::table('games')->insert([
                 'name' => 'ボードゲーム2',
                 'body' => 'ボードゲーム2の説明です！',
-                'number' => '2',
-                'game_time' => '60',
-                'release' => '2000/00/00',
                 'level' => 'Normal',
                 'category_id' => 2,
                 'created_at' => new DateTime(),
@@ -42,9 +36,6 @@ class GameSeeder extends Seeder
         DB::table('games')->insert([
                 'name' => 'ボードゲーム3',
                 'body' => 'ボードゲーム3の説明です！',
-                'number' => '6',
-                'game_time' => '20 ~ 40',
-                'release' => '2000/00/00',
                 'level' => 'Normal',
                 'category_id' => 3,
                 'created_at' => new DateTime(),
@@ -53,9 +44,6 @@ class GameSeeder extends Seeder
         DB::table('games')->insert([
                 'name' => 'ボードゲーム4',
                 'body' => 'ボードゲーム4の説明です！',
-                'number' => '2',
-                'game_time' => '20 ~ 40',
-                'release' => '2000/00/00',
                 'level' => 'Hard',
                 'category_id' => 4,
                 'created_at' => new DateTime(),
@@ -64,9 +52,6 @@ class GameSeeder extends Seeder
         DB::table('games')->insert([
                 'name' => 'ボードゲーム5',
                 'body' => 'ボードゲーム5の説明です！',
-                'number' => '2 ~ 4',
-                'game_time' => '20 ~ 40',
-                'release' => '2000/00/00',
                 'level' => 'easy',
                 'category_id' => 4,
                 'created_at' => new DateTime(),
