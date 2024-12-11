@@ -13,7 +13,6 @@
             </div>
         </x-slot>
         <body>
-            <h1 class="title">編集画面</h1>
             <div class="content">
                 <form action="/games/{{ $game->id }}" method="POST" enctype="multipart/form-data">
                     @csrf
