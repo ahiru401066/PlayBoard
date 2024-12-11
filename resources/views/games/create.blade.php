@@ -11,7 +11,7 @@
     <x-app-layout>
         <x-slot name="header">
             <div class="bg-green-800 text-white py-4 px-6 rounded-lg shadow-md text-center">
-                <h2 class="text-xl font-semibold">Create Game</h2>
+                <h2 class="text-xl font-semibold">PlayBoard</h2>
             </div>
         </x-slot>
 
