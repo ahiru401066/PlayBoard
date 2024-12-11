@@ -17,9 +17,6 @@ return new class extends Migration
             $table->id();
             $table->string('name',20);
             $table->string('body', 200);
-            $table->string('number',5);
-            $table->string('game_time',10);
-            $table->string('release',30);
             $table->string('level',10);
             $table->string('image_url')->nullable();
             $table->foreignId('category_id')->constrained();
