@@ -43,6 +43,14 @@
             <!-- Game Content -->
             <div class="bg-white p-6 rounded-lg shadow-md mb-6">
                 <h3 class="text-xl font-semibold text-green-800 mb-2">本文</h3>
+                <p>{{ $game->level }}</p>
+            </div>
+                <p>{{ $game->body }}</p>
+            </div>
+
+            <!-- Level -->
+            <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+                <h3 class="text-xl font-semibold text-green-800 mb-2">本文</h3>
                 <p>{{ $game->body }}</p>
             </div>
 
