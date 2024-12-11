@@ -10,10 +10,10 @@
             <div class="bg-white overflow-hidden shadow-lg sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     <div class="text-2xl font-bold text-green-800 mb-4">
-                        {{ __("Welcome to PlayBoard !!") }}
+                        {{ __("ようこそ、PlayBoardへ!!") }}
                     </div>
                     <p class="text-gray-600">
-                        {{ __("Explore our features and start using PlayBoard to manage your games!") }}
+                        {{ __("ボードゲームがもっと身近に。PlayBoardで遊びの世界を広げてみよう！") }}
                     </p>
                 </div>
             </div>
