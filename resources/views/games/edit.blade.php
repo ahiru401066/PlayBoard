@@ -32,12 +32,6 @@
                         </select>
                     </div>
                     <div>
-                        <p>number</p>
-                        <input type="text" name="game[number]" value="{{ $game->number }}">
-                        <p>game_time</p>
-                        <input type="text" name="game[game_time]" value="{{ $game->game_time }}">
-                        <p>release</p>
-                        <input type="text" name="game[release]" value="{{ $game->release }}">
                         <p>level</p>
                         <input type="text" name="game[level]" value="{{ $game->level }}">
                     </div>
