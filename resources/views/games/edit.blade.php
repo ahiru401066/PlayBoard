@@ -50,9 +50,6 @@
                                class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400">
                     </div>
 
-                    
-                    <input type="submit" value="保存">
-
                     <div class="text-center">
                         <button type="submit" 
                                 class="bg-green-600 text-white px-6 py-2 rounded-lg shadow-md hover:bg-green-700 transition">
