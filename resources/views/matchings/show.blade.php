@@ -10,7 +10,7 @@
 <x-app-layout>
     <x-slot name="header">
         <div class="bg-green-800 text-white py-4 px-6 rounded-lg shadow-lg flex justify-between items-center">
-            <div class="text-xl font-semibold">Matching</div>
+            <div class="text-xl font-semibold text-center">Matching</div>
             <a href="/matchings/index" class="bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition duration-300">戻る</a>
         </div>
     </x-slot>
@@ -54,17 +54,17 @@
 
             <!-- User Opinion Form -->
             <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
-                <h2 class="text-2xl font-bold text-green-800 mb-4">Opinion</h2>
+                <h2 class="text-2xl font-bold text-green-800 mb-4">チャットに書き込む</h2>
                 <form action="/matchings/{{ $matching->id }}/opinion" method="POST">
                     @csrf
-                    <textarea name="opinion[opinion]" placeholder="コメントサンプル" class="w-full p-3 border border-gray-300 rounded-md mb-4"></textarea>
-                    <button type="submit" class="bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition duration-300">Store</button>
+                    <textarea name="opinion[opinion]" placeholder="こんにちは！" class="w-full p-3 border border-gray-300 rounded-md mb-4"></textarea>
+                    <button type="submit" class="bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition duration-300">投稿</button>
                 </form>
             </div>
 
             <!-- Display Opinions -->
             <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h2 class="text-2xl font-bold text-green-800 mb-4">Opinions</h2>
+                <h2 class="text-2xl font-bold text-green-800 mb-4">チャット</h2>
                 @foreach($matching->opinions as $opinion)
                     <div class="bg-teal-50 p-4 rounded-lg shadow-sm mb-4">
                         <p class="text-green-800 font-semibold">{{ $opinion->user->name }}</p>
