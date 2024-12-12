@@ -17,6 +17,7 @@
             </div>
         </x-slot>
 
+        <div class="max-w-6xl mx-auto p-4">
             <!-- Game Title -->
             <h1 class="text-3xl font-bold text-green-800 mb-4 text-center">
                 {{ $game->name }}
@@ -94,6 +95,7 @@
                 @endcan
             </div>
         </div>
+    </div>
     </x-app-layout>
 </body>
 </html>
