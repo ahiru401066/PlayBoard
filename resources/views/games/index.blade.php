@@ -13,12 +13,11 @@
     <x-app-layout>
         <x-slot name="header">
             <div class="bg-green-800 text-white py-4 px-6 rounded-lg shadow-md text-center">
-                <h2 class="text-xl font-semibold">Game</h2>
+                <h2 class="text-xl font-semibold">ボードゲーム</h2>
             </div>
         </x-slot>
 
         <div class="max-w-6xl mx-auto p-4">
-            <h1 class="text-6xl text-green-900 text-center my-4">BoardGame</h1>
             <div class="flex flex-wrap p-4">
                 @foreach ($games as $game)
                 <div class="border border-gray-200 bg-white p-6 md:m-2 w-full md:w-80 flex-1 rounded-lg shadow-md transition-transform transform hover:scale-105">
