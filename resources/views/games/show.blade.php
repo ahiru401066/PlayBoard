@@ -17,7 +17,7 @@
                 <div class="flex items-center justify-between">
                     <!-- Game Details -->
                     <h2 class="font-semibold text-xl text-green-800 leading-tight">
-                        {{ __('Game Details') }}
+                        {{ __('ゲーム詳細') }}
                     </h2>
                     
                     <!-- Back Button -->
@@ -67,29 +67,29 @@
             <form action="/games/{{ $game->id }}/comment" method="POST" class="bg-white p-6 rounded-lg shadow-md mb-6">
                 @csrf
                 <div class="mb-4">
-                    <h2 class="text-lg font-semibold text-green-800 mb-2">Create Comment</h2>
-                    <textarea name="comment[comment]" placeholder="コメントサンプル" class="border rounded-md p-2 w-full" rows="4"></textarea>
+                    <h2 class="text-lg font-semibold text-green-800 mb-2">コメント作成</h2>
+                    <textarea name="comment[comment]" placeholder="このボードゲームは、..." class="border rounded-md p-2 w-full" rows="4"></textarea>
                 </div>
-                <x-primary-button>Store</x-primary-button>
+                <x-primary-button>保存</x-primary-button>
             </form>
 
             <!-- Rating Form -->
             <form action="/games/{{ $game->id }}/rate" method="POST" class="bg-white p-6 rounded-lg shadow-md mb-6">
                 @csrf
                 <div class="mb-4">
-                    <h2 class="text-lg font-semibold text-green-800 mb-2">Create Rate</h2>
+                    <h2 class="text-lg font-semibold text-green-800 mb-2">評価</h2>
                     <div class="flex items-center">
                         <span class="text-sm mr-2">0</span>
                         <input type="range" name="rate[rate]" min="0" max="5" class="w-full" />
                         <span class="text-sm ml-2">5</span>
                     </div>
                 </div>
-                <x-primary-button>Store</x-primary-button>
+                <x-primary-button>保存</x-primary-button>
             </form>
 
             <!-- Comments Section -->
             <div class="bg-white p-6 rounded-lg shadow-md mb-6">
-                <h3 class="text-xl font-semibold text-green-800 mb-2">Comments</h3>
+                <h3 class="text-xl font-semibold text-green-800 mb-2">コメント一覧</h3>
                 @foreach($game->comments as $comment)
                     <div class="mb-4 border-b border-gray-200 pb-2">
                         <p class="font-medium text-green-800">{{ $comment->user->name }}</p>
@@ -102,7 +102,7 @@
             <div class="bg-white p-6 rounded-lg shadow-md mb-6 text-center">
                 @can('admin-higher')
                     <div class="mb-4">
-                        <a href="/games/{{ $game->id }}/edit" class="text-green-600 hover:text-green-800">Edit</a>
+                        <a href="/games/{{ $game->id }}/edit" class="text-green-600 hover:text-green-800">編集</a>
                     </div>
                 @endcan
             </div>
