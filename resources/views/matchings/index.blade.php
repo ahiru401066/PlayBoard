@@ -10,14 +10,14 @@
 <x-app-layout>
     <x-slot name="header">
         <div class="bg-green-800 text-white py-4 px-6 rounded-lg shadow-md text-center">
-            <h2 class="text-xl font-semibold">Matching</h2>
+            <h2 class="text-xl font-semibold">マッチング</h2>
         </div>
     </x-slot>
     <body class="bg-gray-100 font-sans">
         <div class="max-w-4xl mx-auto p-6">
             <!-- Matching Creation Form -->
             <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
-                <h1 class="text-2xl font-bold text-green-700 mb-4">Matchingの作成</h1>
+                <h1 class="text-2xl font-bold text-green-700 mb-4">マッチングの作成</h1>
                 <form action="/matchings/create" method="POST">
                     @csrf
                     <div class="space-y-4">
@@ -34,7 +34,7 @@
 
             <!-- Matching Participation Section -->
             <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h1 class="text-2xl font-bold text-green-700 mb-4">Matchingに参加</h1>
+                <h1 class="text-2xl font-bold text-green-700 mb-4">マッチングに参加</h1>
                 @foreach ($matchings as $matching)
                     <div class="bg-green-50 border border-green-200 p-4 rounded-lg shadow-sm mb-4">
                         <a href="/matchings/{{ $matching->id }}" class="text-xl font-semibold text-green-600 hover:underline">マッチング部屋{{ $matching->id }} - {{ $matching->category->category }}</a>
