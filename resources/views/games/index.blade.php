@@ -34,7 +34,7 @@
                     <form action="/games/{{ $game->id }}" id="form_{{ $game->id }}" method="post" class="text-center mt-4">
                         @csrf
                         @method('DELETE')
-                        <button type="button" class="bg-red-600 text-white rounded p-2 shadow-md hover:bg-red-700 transition" onclick="deletePost({{ $game->id }})">Delete</button>
+                        <button type="button" class="bg-red-600 text-white rounded p-2 shadow-md hover:bg-red-700 transition" onclick="deletePost({{ $game->id }})">削除</button>
                     </form>
                     @endcan
                 </div>
@@ -47,7 +47,7 @@
             
             @can('admin-higher')
             <div class="flex justify-center mt-8">
-                <a href='/games/create' class="bg-green-600 text-white rounded p-3 shadow-lg hover:bg-green-700 transition">Create</a>
+                <a href='/games/create' class="bg-green-600 text-white rounded p-3 shadow-lg hover:bg-green-700 transition">作成</a>
             </div>
             @endcan
         </div>
