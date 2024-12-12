@@ -20,7 +20,7 @@ class Game extends Model
         'image_url',
         ];
     
-    public function getPaginateByLimit(int $limit_count = 6)
+    public function getPaginateByLimit(int $limit_count = 4)
     {
         return $this->orderBy('updated_at', 'DESC')->paginate($limit_count);
     }
