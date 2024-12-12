@@ -8,8 +8,8 @@
     </head>
     <x-app-layout>
         <x-slot name="header">
-            <div class="bg-green-600 text-white text-center py-4 rounded shadow-md">
-                <h2 class="text-2xl font-semibold">編集</h2>
+            <div class="bg-green-800 text-white py-4 px-6 rounded-lg shadow-md text-center">
+                <h2 class="text-xl font-semibold">ボードゲーム記事編集</h2>
             </div>
         </x-slot>
         <body>
