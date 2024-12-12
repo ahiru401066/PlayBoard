@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <div class="bg-green-800 text-white py-4 px-6 rounded-lg shadow-lg">
+        <div class="bg-green-800 text-white py-4 px-6 rounded-lg shadow-lg text-center">
             <h2 class="text-xl font-semibold">{{ __('ダッシュボード') }}</h2>
         </div>
     </x-slot>
