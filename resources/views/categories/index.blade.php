@@ -37,7 +37,7 @@
                             @csrf
                             @method('DELETE')
                             <button type="button" onclick="deleteGame({{ $game->id }})" class="text-red-600 hover:text-red-800 font-semibold">
-                                Delete
+                                削除
                             </button>
                         </form>
                     </div>
