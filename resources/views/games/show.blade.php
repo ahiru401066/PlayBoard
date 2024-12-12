@@ -10,25 +10,12 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.4/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100 text-gray-900">
-    <x-app-layout>
-        <div class="max-w-4xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-            <!-- Header Section with Background Color -->
-            <div class="bg-green-50 p-4 rounded-lg mb-6">
-                <div class="flex items-center justify-between">
-                    <!-- Game Details -->
-                    <h2 class="font-semibold text-xl text-green-800 leading-tight">
-                        {{ __('ゲーム詳細') }}
-                    </h2>
-                    
-                    <!-- Back Button -->
-                    <a href="/" class="inline-flex items-center text-sm font-medium text-green-600 hover:text-green-800">
-                        <svg class="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                        </svg>
-                        {{ __('戻る') }}
-                    </a>
-                </div>
+        <x-app-layout>
+        <x-slot name="header">
+            <div class="bg-green-800 text-white py-4 px-6 rounded-lg shadow-md text-center">
+                <h2 class="text-xl font-semibold">ゲーム詳細</h2>
             </div>
+        </x-slot>
 
             <!-- Game Title -->
             <h1 class="text-3xl font-bold text-green-800 mb-4 text-center">
