@@ -6,13 +6,13 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.cm/css?family=Nunito:200,600" rel="stylesheet">
     </head>
+    <body>
     <x-app-layout>
         <x-slot name="header">
             <div class="bg-green-800 text-white py-4 px-6 rounded-lg shadow-md text-center">
                 <h2 class="text-xl font-semibold">ボードゲーム記事編集</h2>
             </div>
         </x-slot>
-        <body>
             <div class="content">
                 <form action="/games/{{ $game->id }}" method="POST" enctype="multipart/form-data">
                     @csrf
@@ -62,8 +62,8 @@
                 <a href="/games/{{ $game->id }}" 
                    class="text-green-600 hover:text-green-800 transition">戻る</a>
             </div>
-        </body>
     </x-app-layout>
+    </body>
 </html>
 
 
