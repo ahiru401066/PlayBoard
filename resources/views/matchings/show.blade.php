@@ -8,10 +8,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <x-app-layout>
-    <x-slot name="header">
-        <div class="bg-green-800 text-white py-4 px-6 rounded-lg shadow-lg flex justify-between items-center">
-            <div class="text-xl font-semibold text-center">Matching</div>
-            <a href="/matchings/index" class="bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition duration-300">戻る</a>
+        <x-slot name="header">
+        <div class="bg-green-800 text-white py-4 px-6 rounded-lg shadow-md text-center">
+            <h2 class="text-xl font-semibold">マッチング</h2>
         </div>
     </x-slot>
     <body class="bg-gray-50 font-sans">
