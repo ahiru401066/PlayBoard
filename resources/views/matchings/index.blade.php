@@ -27,7 +27,7 @@
                             @endforeach
                         </select>
                         <input type="text" name="matching[date]" placeholder="2000/00/00" class="w-full p-3 border border-gray-300 rounded-md">
-                        <button type="submit" class="w-full bg-green-600 text-white py-3 rounded-md hover:bg-green-700 transition duration-300">保存</button>
+                        <button type="submit" class="w-full bg-green-600 text-white py-3 rounded-md hover:bg-green-700 transition duration-300">作成</button>
                     </div>
                 </form>
             </div>
