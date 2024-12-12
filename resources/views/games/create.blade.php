@@ -11,12 +11,11 @@
     <x-app-layout>
         <x-slot name="header">
             <div class="bg-green-800 text-white py-4 px-6 rounded-lg shadow-md text-center">
-                <h2 class="text-xl font-semibold">PlayBoard</h2>
+                <h2 class="text-xl font-semibold">ボードゲーム記事作成</h2>
             </div>
         </x-slot>
 
         <div class="max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-md mt-6">
-            <h1 class="text-3xl font-bold text-green-900 mb-6 text-center">ボードゲーム生成</h1>
             <form action="/games" method="POST" enctype="multipart/form-data" class="space-y-6">
                 @csrf
                 <!-- Name -->
