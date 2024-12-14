@@ -6,13 +6,11 @@
     <title>PlayBoard</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-    <!-- Tailwind CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.4/dist/tailwind.min.css" rel="stylesheet">
     <style>
         .pagination {
         　display: flex;
           justify-content: center; 
-    　　　　margin: 20px;
+    　　　 margin: 20px;
         }
         .page-item {
             border: 0.5px solid #eeeeee;
@@ -28,6 +26,8 @@
             color: #999999;
         }
     </style>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.4/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100 text-gray-900">
     <x-app-layout>
