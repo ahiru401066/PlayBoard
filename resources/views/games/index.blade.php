@@ -12,20 +12,20 @@
         .pagination {
         　display: flex;
           justify-content: center; 
-          margin: 20px;
-            .page-item {
-              border: 0.5px solid #eeeeee;
-              padding: 15px;
-            }
-            .disabled {
-              color: #222222;
-            }
-            .active {
-              background: #7dc7ea;
-            }
-            .page-link {
-              color: #999999;
-            }
+    　　　　margin: 20px;
+        }
+        .page-item {
+            border: 0.5px solid #eeeeee;
+            padding: 15px;
+        }
+        .disabled {
+            color: #222222;
+        }
+        .active {
+            background: #7dc7ea;
+        }
+        .page-link {
+            color: #999999;
         }
     </style>
 </head>
