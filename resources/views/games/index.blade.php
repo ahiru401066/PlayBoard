@@ -6,9 +6,11 @@
     <title>PlayBoard</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.4/dist/tailwind.min.css" rel="stylesheet">
     <style>
         .pagination {
-        　display: flex;
+        　display: flex !important;
           justify-content: center; 
     　　　 margin: 20px;
         }
@@ -26,8 +28,6 @@
             color: #999999;
         }
     </style>
-    <!-- Tailwind CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.4/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100 text-gray-900">
     <x-app-layout>
@@ -61,9 +61,9 @@
                 @endforeach
             </div>
             
-                <div class="pagination flex items-center space-x-1">
-                    {{ $games->links() }}
-                </div>
+            <div class="pagination flex items-center space-x-1">
+                {{ $games->links() }}
+            </div>
             
             @can('admin-higher')
             <div class="flex justify-center mt-8">
