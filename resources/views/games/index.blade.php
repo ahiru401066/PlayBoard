@@ -62,9 +62,7 @@
             </div>
             
             <div class="flex justify-center mt-8">
-                <div class="pagination flex items-center space-x-1">
-                    {{ $games->links() }}
-                </div>
+                {{ $games->links() }}
             </div>
             
             @can('admin-higher')
