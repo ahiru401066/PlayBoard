@@ -62,7 +62,7 @@
             </div>
             
             <div class="pagination flex items-center space-x-1">
-                {{ $games->links() }}
+                {{ $games->links('pagination::bootstrap-4') }}
             </div>
             
             @can('admin-higher')
