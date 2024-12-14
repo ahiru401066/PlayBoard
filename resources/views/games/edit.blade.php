@@ -63,7 +63,7 @@
                     <a href="/games/{{ $game->id }}" 
                        class="text-green-600 hover:text-green-800 transition">戻る</a>
                 </div>
-            </div>
+        </div>
     </x-app-layout>
     </body>
 </html>
