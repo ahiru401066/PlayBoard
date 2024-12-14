@@ -61,7 +61,7 @@
                 @endforeach
             </div>
             
-            <div class="flex justify-center mt-8">
+            <div class="mt-8">
                 {{ $games->links() }}
             </div>
             
