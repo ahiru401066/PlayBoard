@@ -14,6 +14,9 @@
           justify-content: center; 
     　　　 margin: 20px;
         }
+        .pagination li {
+            display: inline-block;
+        }
         .page-item {
             border: 0.5px solid #eeeeee;
             padding: 15px;
