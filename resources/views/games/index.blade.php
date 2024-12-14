@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.4/dist/tailwind.min.css" rel="stylesheet">
     <style>
         .pagination {
-        　display: flex !important;
+        　display: flex;
           justify-content: center; 
     　　　 margin: 20px;
         }
