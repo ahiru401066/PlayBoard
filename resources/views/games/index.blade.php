@@ -61,9 +61,9 @@
                 @endforeach
             </div>
             
-            <div class="mt-8">
-                {{ $games->links() }}
-            </div>
+                <div class="pagination flex items-center space-x-1">
+                    {{ $games->links() }}
+                </div>
             
             @can('admin-higher')
             <div class="flex justify-center mt-8">
