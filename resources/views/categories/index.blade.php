@@ -20,9 +20,6 @@
             <!-- Category Section -->
             <div class="bg-white shadow-md rounded-lg p-6 mb-8">
                 <h1 class="text-3xl font-semibold text-green-700 mb-4">{{ $categoryName }}</h1>
-                <p class="text-gray-700 mb-4">
-                    カテゴリーの説明があります！カテゴリーの説明があります！カテゴリーの説明があります！カテゴリーの説明があります！カテゴリーの説明があります！カテゴリーの説明があります！
-                </p>
     
                 <!-- Games List -->
                 @foreach ($games as $game)
