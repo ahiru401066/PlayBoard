@@ -16,12 +16,10 @@
             </div>
         </x-slot>
         <div class="max-w-7xl mx-auto px-4 py-8">
-            <!-- Page Title -->
-            <h1 class="text-4xl font-bold text-green-800 mb-6 ">カテゴリー一覧</h1>
     
             <!-- Category Section -->
             <div class="bg-white shadow-md rounded-lg p-6 mb-8">
-                <h1 class="text-3xl font-semibold text-green-700 mb-4">カテゴリー</h1>
+                <h1 class="text-3xl font-semibold text-green-700 mb-4">{{ $categoryName }}</h1>
                 <p class="text-gray-700 mb-4">
                     カテゴリーの説明があります！カテゴリーの説明があります！カテゴリーの説明があります！カテゴリーの説明があります！カテゴリーの説明があります！カテゴリーの説明があります！
                 </p>
