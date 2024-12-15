@@ -9,6 +9,9 @@ class CategoryController extends Controller
 {
     public function index(Category $category)
     {
-        return view('categories/index')->with(['games' => $category->getByCategory()]);
+        return view('categories/index')->with([
+            'games' => $category->getByCategory(),
+            'categoryName' => $category->name,
+        ]);
     }
 }
