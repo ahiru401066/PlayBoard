@@ -4,8 +4,8 @@
 
 #### ゲーム詳細画面
 <div style="display: flex">
-    <img width="500" height="500" src="https://github.com/user-attachments/assets/29d86f72-9995-41fb-9686-180201558b46" />
-    <img width="500" height="500" src="https://github.com/user-attachments/assets/1871d9e7-9620-472d-b445-b9a82a891893" />
+    <img width="400" height="400" src="https://github.com/user-attachments/assets/29d86f72-9995-41fb-9686-180201558b46" />
+    <img width="400" height="400" src="https://github.com/user-attachments/assets/1871d9e7-9620-472d-b445-b9a82a891893" />
 </div>
 
 #### マッチング部屋画面
