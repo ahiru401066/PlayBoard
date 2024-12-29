@@ -52,7 +52,7 @@
 When searching for new board games, I noticed the lack of accessible reviews and player feedback, making it difficult to judge if a game was genuinely fun. To address this issue, I created an environment where users can share their thoughts and ratings about board games. By enabling players to view detailed comments and evaluations from others, the app helps users find the games they’re most interested in playing.
 
 
-## skills
+## List of Technologies
 
-## feature
+## Feature
 
