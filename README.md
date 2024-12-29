@@ -1,6 +1,7 @@
 [日本語](#日本語) | [English](#english)
 # Play Board
-<img width="1000" height="400" src="https://github.com/user-attachments/assets/2cceeef3-f577-4e8a-9965-80473c55cd70" />
+<img width="1440" src="https://github.com/user-attachments/assets/d3f11d62-1288-4c8b-b796-a8955577ca88" />
+
 
 #### 日本語
 ## アプリ概要
