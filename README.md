@@ -74,17 +74,17 @@ When searching for new board games, I noticed the lack of accessible reviews and
 
 ## Feature
 - Authentication
- - Login / Logout
- - User Registration / Display (My Page) / Update / Delete
- - User Password Update
- - Password Reset  
+  - Login / Logout
+  - User Registration / Display (My Page) / Update / Delete
+  - User Password Update
+  - Password Reset  
 - Board Game Management
- - Board Games Create / Display / Update / Delete
- - Categories Display
- - Comments Create / Display
- - Ratings Create / Display 
- - Pagination
+  - Board Games Create / Display / Update / Delete
+  - Categories Display
+  - Comments Create / Display
+  - Ratings Create / Display 
+  - Pagination
 - Matching Management
- - Matching Rooms Create / Display 
+  - Matching Rooms Create / Display 
 - Roles Administrator / User
 
