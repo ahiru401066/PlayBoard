@@ -2,6 +2,17 @@
 # Play Board
 <img width="1440" src="https://github.com/user-attachments/assets/d3f11d62-1288-4c8b-b796-a8955577ca88" />
 
+#### ゲーム詳細画面
+<div style="display: flex">
+    <img width="500" height="500" src="https://github.com/user-attachments/assets/29d86f72-9995-41fb-9686-180201558b46" />
+    <img width="500" height="500" src="https://github.com/user-attachments/assets/1871d9e7-9620-472d-b445-b9a82a891893" />
+</div>
+
+#### マッチング部屋画面
+<div style="display: flex">
+    
+</div>
+
 #### 日本語
 ## アプリ概要
 　このアプリは、ボードゲーム初心者からボードゲームが好きな人まで幅広い人を対象に、自分に合ったボードゲームや新たなボードゲームを発見できるように作成しました。主な２つの機能があります。 
