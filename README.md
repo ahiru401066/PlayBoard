@@ -33,6 +33,7 @@
 - PHP 8.0.2
 - Laravel 9.19
 - Tailwind CSS 3.1.0
+- MySQL
 
 ## 機能一覧
 
@@ -52,6 +53,10 @@ When searching for new board games, I noticed the lack of accessible reviews and
 
 
 ## List of Technologies
+- PHP 8.0.2
+- Laravel 9.19
+- Tailwind CSS 3.1.0
+- MySQL
 
 ## Feature
 
