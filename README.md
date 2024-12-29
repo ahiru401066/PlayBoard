@@ -36,6 +36,20 @@
 - MySQL
 
 ## 機能一覧
+- 認証
+  - ログイン / ログアウト
+  - ユーザー登録 / 表示 (マイページ) / 更新 / 削除
+  - ユーザーパスワード更新
+  - パスワードリセット
+- ボードゲーム 管理
+  - ボードゲーム 作成 / 表示 / 更新 / 削除
+  - カテゴリー 表示
+  - コメント 作成 / 表示
+  - 評価 作成 / 表示
+  - ページネーション
+- マッチング 管理
+  - マッチング部屋 作成 / 表示
+- 役割 管理者 / ユーザー
 
 
 ##### English
@@ -59,4 +73,18 @@ When searching for new board games, I noticed the lack of accessible reviews and
 - MySQL
 
 ## Feature
+- Authentication
+ - Login / Logout
+ - User Registration / Display (My Page) / Update / Delete
+ - User Password Update
+ - Password Reset  
+- Board Game Management
+ - Board Games Create / Display / Update / Delete
+ - Categories Display
+ - Comments Create / Display
+ - Ratings Create / Display 
+ - Pagination
+- Matching Management
+ - Matching Rooms Create / Display 
+- Roles Administrator / User
 
