@@ -10,8 +10,8 @@
 
 #### マッチング部屋画面
 <div style="display: flex">
-    <img width="500" hegiht="500" src="https://github.com/user-attachments/assets/f5936419-aa1c-4e8e-8c4e-3c4862dd35b8" />
-    <img width="500" hegiht="500" src="https://github.com/user-attachments/assets/4a6e9ee6-fb5f-43ad-bb43-4a437b4b842a" />
+    <img width="400" hegiht="400" src="https://github.com/user-attachments/assets/f5936419-aa1c-4e8e-8c4e-3c4862dd35b8" />
+    <img width="400" hegiht="400" src="https://github.com/user-attachments/assets/4a6e9ee6-fb5f-43ad-bb43-4a437b4b842a" />
 </div>
 
 #### 日本語
