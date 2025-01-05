@@ -14,6 +14,11 @@
     <img width="400" hegiht="400" src="https://github.com/user-attachments/assets/4a6e9ee6-fb5f-43ad-bb43-4a437b4b842a" />
 </div>
 
+### url
+メールアドレス：a@a  
+パスワード：password　でユーザーとしてログインできます。  
+https://playboard-99fc83c9693d.herokuapp.com/
+
 #### 日本語
 ## アプリ概要
 　このアプリは、ボードゲーム初心者からボードゲームが好きな人まで幅広い人を対象に、自分に合ったボードゲームや新たなボードゲームを発見できるように作成しました。主な２つの機能があります。 
