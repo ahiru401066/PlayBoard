@@ -15,8 +15,6 @@
 </div>
 
 ### url
-メールアドレス：a@a  
-パスワード：password　でユーザーとしてログインできます。  
 https://playboard-99fc83c9693d.herokuapp.com/
 
 #### 日本語
