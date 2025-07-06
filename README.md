@@ -13,9 +13,6 @@
     <img width="400" hegiht="400" src="https://github.com/user-attachments/assets/4a6e9ee6-fb5f-43ad-bb43-4a437b4b842a" />
 </div>
 
-### url
-https://playboard-99fc83c9693d.herokuapp.com/
-
 #### 日本語
 ## アプリ概要
 　このアプリは、ボードゲーム初心者からボードゲームが好きな人まで幅広い人を対象に、自分に合ったボードゲームや新たなボードゲームを発見できるように作成しました。  
@@ -35,6 +32,12 @@ https://playboard-99fc83c9693d.herokuapp.com/
 - Laravel 9.19
 - Tailwind CSS 3.1.0
 - MySQL
+
+## 技術選定理由
+- 学習コストの低さと情報の多さ  
+  PHPのフレームワークであるLaravelは非常に人気があり、ドキュメントが充実しているため選定しました。
+- フロントエンドからバックエンドまで開発できる  
+  LaravelのBladeテンプレートエンジンにより、バックエンドとフロントエンドまで実装がしやすいため、幅広い技術領域が求められる個人開発でも一人で完成にたどり着けると思い選定しました。
 
 ## 機能一覧
 - 認証
