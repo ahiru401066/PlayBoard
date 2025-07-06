@@ -1,4 +1,3 @@
-[日本語](#日本語) | [English](#english)
 # Play Board
 <img width="1440" src="https://github.com/user-attachments/assets/d3f11d62-1288-4c8b-b796-a8955577ca88" />
 
@@ -52,41 +51,3 @@ https://playboard-99fc83c9693d.herokuapp.com/
 - マッチング 管理
   - マッチング部屋 作成 / 表示
 - 役割 管理者 / ユーザー
-
-
-##### English
-## App Overview
- This app is designed for a wide range of users, from board game beginners to avid enthusiasts, aiming to help them discover board games that suit their preferences or find new ones to explore. The app offers two main features:
-
-1. **Board Game Listings and Reviews**:  
-   Users can browse a comprehensive list of board games. They can filter games by category and check reviews and ratings provided by other users. This allows players to make informed choices by referencing the experiences of others.
-
-2. **Matching Room Feature**:  
-   Users can create rooms and discuss with participants which board games to play. The app also includes a chat feature within these rooms, enabling users to coordinate schedules and rules, fostering a smooth and enjoyable gaming experience.
-
-### Background of Development  
-When searching for new board games, I noticed the lack of accessible reviews and player feedback, making it difficult to judge if a game was genuinely fun. To address this issue, I created an environment where users can share their thoughts and ratings about board games. By enabling players to view detailed comments and evaluations from others, the app helps users find the games they’re most interested in playing.
-
-
-## List of Technologies
-- PHP 8.0.2
-- Laravel 9.19
-- Tailwind CSS 3.1.0
-- MySQL
-
-## Feature
-- Authentication
-  - Login / Logout
-  - User Registration / Display (My Page) / Update / Delete
-  - User Password Update
-  - Password Reset  
-- Board Game Management
-  - Board Games Create / Display / Update / Delete
-  - Categories Display
-  - Comments Create / Display
-  - Ratings Create / Display 
-  - Pagination
-- Matching Management
-  - Matching Rooms Create / Display 
-- Roles Administrator / User
-
